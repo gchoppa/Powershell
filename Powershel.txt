@@ -1,0 +1,15 @@
+Create a RG
+
+New-AzResourceGroup -Name myResourceGroup -Location EastUS
+
+Create VM
+
+New-AzVm `
+    -ResourceGroupName "Test" `
+    -Name "TestVM" `
+    -Location "East US" `
+    -VirtualNetworkName "TestVnet" `
+    -SubnetName "TestSubnet" `
+    -SecurityGroupName "TestNetworkSecurityGroup" `
+    -PublicIpAddressName "TestPublicIpAddress" `
+    -OpenPorts 80,8080
